@@ -212,7 +212,7 @@ public class Anagrams extends JFrame {
         gridBagConstraints.gridy = 2;
         mainPanel.add(levelLabel, gridBagConstraints);
 
-        selectLevel.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Yasashii", "Futsuu", "Oni" }));
+        selectLevel.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Yasashii", "Futsuu","choimuzu","Oni"}));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
