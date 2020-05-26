@@ -60,6 +60,9 @@ public abstract class WordLibrary {
      * @param idx index of required word
      * @return word at that index in its scrambled form
      */
+    public abstract String mixwords(int idx);//追加したメソッド
+    
+    
     public abstract String getScrambledWord(int idx);
 
     /**

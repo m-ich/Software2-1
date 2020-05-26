@@ -1,3 +1,4 @@
+
 /*
  * Copyright (c) 2010, Oracle.
  * All rights reserved.
@@ -31,6 +32,7 @@
 
 package com.toy.anagrams.lib;
 
+import java.util.Arrays;
 /**
  * Implementation of the logic for the Anagram Game application.
  */
@@ -87,56 +89,7 @@ final class StaticWordLibrary extends WordLibrary {
         "application"
         };
 
-    private static final String[] SCRAMBLED_WORD_LIST = {
-        "batsartc",
-        "maibuguos",
-        "ratimhteci",
-        "abkclssha",
-        "ibmtpa",
-        "iccrmutsnaec",
-        "ocbmnitaoni",
-        "ocsnqeeutnyl",
-        "ocsnroitmu",
-        "edrcmeneitgn",
-        "edepdnneyc",
-        "idasbmgiauet",
-        "ydanicm",
-        "neacsplutaoni",
-        "qeiuaveltn",
-        "xerpseisno",
-        "aficilatet",
-        "rfgaemtn",
-        "ehaxedicalm",
-        "milpmeneatitno",
-        "niidtsniugsiahleb",
-        "niehiratcen",
-        "nietnret",
-        "ajav",
-        "olacilazitno",
-        "imrcpoorecssro",
-        "anivagitno",
-        "poitimazitno",
-        "aparemert",
-        "aprtcki",
-        "ipkcel",
-        "opylomprich",
-        "irogorsuyl",
-        "isumtlnaoesuyl",
-        "psceficitaoni",
-        "tsurtcreu",
-        "elixalc",
-        "ilekiwse",
-        "amanegemtn",
-        "aminupalet",
-        "amhtmetacsi",
-        "ohjtvaa",
-        "evtrxe",
-        "nuisngde",
-        "rtdatioialn",
-        "nients",
-        "fwstaoer",
-        "ptnpacialio"
-    };
+   
     
     final static WordLibrary DEFAULT = new StaticWordLibrary();
 
@@ -160,6 +113,13 @@ final class StaticWordLibrary extends WordLibrary {
      * @param idx index of required word
      * @return word at that index in its scrambled form
      */
+    public String mixwords(int idx){ //追加したメソッド
+    	String word=WORD_LIST[idx];
+    	char[] chars = word.toCharArray();
+    	Arrays.sort(chars);
+    	String word2 = new String(chars);
+    	return word2;
+    }
     public String getScrambledWord(int idx) {
         return SCRAMBLED_WORD_LIST[idx];
     }
